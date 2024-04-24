@@ -1,0 +1,84 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #440080;
+    font-weight: 900;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navegador{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width: 480px)  {
+    .navegador{
+        width: 90%;
+        flex-direction: column;
+    }
+    a{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px)  {
+    .navegador{
+        width: 90%;
+    }
+}
+
+@media (max-width: 1200px)  {
+    .navegador{
+        width: 90%;
+    }
+}
+
+
+.buscar{
+    padding: 5px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.buscar input{
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: black;
+    outline: none;
+    border:  1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+.btn{
+    width: 55px;
+    background: #440080;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: white;
+    border-radius: 50px;
+}
+
+.buscar:hover input{
+    width: 240px;
+}
+.buscar input:focus{
+    width: 240px;
+}
