@@ -1,6 +1,4 @@
 *{
-    margin: 0px;
-    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -47,38 +45,110 @@ a{
     }
 }
 
-
-.buscar{
-    padding: 5px;
+.container{
+    margin-top: 20px;
     display: flex;
-    text-align: center;
     align-items: center;
+    justify-content: center;
+}
+input{
+    height: 40px;
+    width: 80%;
+    border-radius: 20px;
 }
 
-.buscar input{
-    width: 240px;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 18px;
-    color: black;
-    outline: none;
-    border:  1px solid silver;
-    border-radius: 30px;
-    transition: all 0.6s ease;
+::placeholder{
+    color: #440080 ;
+    padding: 10px;
 }
 .btn{
-    width: 55px;
-    background: #440080;
-    height: 55px;
-    line-height: 55px;
-    text-align: center;
-    color: white;
-    border-radius: 50px;
+    background-color: #440080;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    outline: none;
+    border: 0;
 }
 
-.buscar:hover input{
-    width: 240px;
+.card{
+    background-color: antiquewhite;
+    width: 95%;
+    height: 20%;
+    border-radius:10px;
+    -webkit-box-shadow: -5px 25px 59px -7px rgba(149,84,186,0.74);
+    -moz-box-shadow: -5px 25px 59px -7px rgba(149,84,186,0.74);
+    box-shadow: -5px 25px 59px -7px rgba(149,84,186,0.74);
 }
-.buscar input:focus{
-    width: 240px;
+
+img{
+    height: 300px;
+    width: 100%;
+    padding: 10px;
+}
+
+.info{
+    max-width: 80%;
+    display: inline-block;
+    margin-left:20px ;
+}
+
+/* .date{
+    display: inline-block;
+}
+.recommend{
+    display: inline-block;
+} */
+
+@media (min-width: 480px) {
+    .card {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    }
+img{
+    width:70%;
+}
+}
+
+@media (min-width: 768px) {
+    .card {
+    display: flex;
+    width: 80%;
+    }
+img{
+    width:50%;
+}
+}
+
+.isbn{
+    display: inline-block;
+}
+
+.author{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #2d2831;
+}
+
+
+
+@media (min-width: 1200px) {
+    .card {
+    width: 80%;
+    }
+img{
+    width:35%;
+}
+}
+
+.caja{
+    display: flex;
+    flex-direction: column;
+    gap:20px
 }

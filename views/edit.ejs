@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar's Review</title>
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+
+<div class="container">
+    <form action="/edit" method="post">
+        <div class="caja">
+        <label for="recomend">Recommendation:</label>
+        <input type="number" max=10 name="recomend" placeholder="1-10"><br>
+        </div>
+        <div class="caja">
+        <label for="resume">Resume</label>
+        <input type="text" name="resume"><br>
+        </div>
+        <button type="submit" >Edit</button>
+    </form>
+    </div>
+</body>
+</html>
