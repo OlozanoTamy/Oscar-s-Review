@@ -1,95 +1,94 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-a{
-    text-decoration: none;
-    color: #440080;
-    font-weight: 900;
-    font-size: 2rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+a {
+  text-decoration: none;
+  color: #440080;
+  font-weight: 900;
+  font-size: 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.navegador{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.navegador {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-@media (max-width: 480px)  {
-    .navegador{
-        width: 90%;
-        flex-direction: column;
-    }
-    a{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 768px)  {
-    .navegador{
-        width: 90%;
-    }
-}
-
-@media (max-width: 1200px)  {
-    .navegador{
-        width: 90%;
-    }
-}
-
-.container{
+@media (max-width: 480px) {
+  .navegador {
+    width: 90%;
+    flex-direction: column;
+  }
+  a {
     margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-input{
-    height: 40px;
-    width: 80%;
-    border-radius: 20px;
+    margin-bottom: 20px;
+  }
 }
 
-::placeholder{
-    color: #440080 ;
-    padding: 10px;
-}
-.btn{
-    background-color: #440080;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    outline: none;
-    border: 0;
+@media (max-width: 768px) {
+  .navegador {
+    width: 90%;
+  }
 }
 
-.card{
-    background-color: antiquewhite;
-    width: 95%;
-    height: 20%;
-    border-radius:10px;
-    -webkit-box-shadow: -5px 25px 59px -7px rgba(149,84,186,0.74);
-    -moz-box-shadow: -5px 25px 59px -7px rgba(149,84,186,0.74);
-    box-shadow: -5px 25px 59px -7px rgba(149,84,186,0.74);
+@media (max-width: 1200px) {
+  .navegador {
+    width: 90%;
+  }
 }
 
-img{
-    height: 300px;
-    width: 100%;
-    padding: 10px;
+.container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input {
+  height: 40px;
+  width: 80%;
+  border-radius: 20px;
 }
 
-.info{
-    max-width: 80%;
-    display: inline-block;
-    margin-left:20px ;
+::placeholder {
+  color: #440080;
+  padding: 10px;
+}
+.btn {
+  background-color: #440080;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  outline: none;
+  border: 0;
+}
+
+.card {
+  background-color: antiquewhite;
+  width: 95%;
+  height: 20%;
+  border-radius: 10px;
+  -webkit-box-shadow: -5px 25px 59px -7px rgba(149, 84, 186, 0.74);
+  -moz-box-shadow: -5px 25px 59px -7px rgba(149, 84, 186, 0.74);
+  box-shadow: -5px 25px 59px -7px rgba(149, 84, 186, 0.74);
+}
+
+img {
+  height: 300px;
+  width: 100%;
+  padding: 10px;
+}
+
+.info {
+  max-width: 80%;
+  display: inline-block;
+  margin-left: 20px;
 }
 
 /* .date{
@@ -100,55 +99,59 @@ img{
 } */
 
 @media (min-width: 480px) {
-    .card {
+  .card {
     width: 80%;
     display: flex;
     flex-direction: column;
-    }
-img{
-    width:70%;
-}
+  }
+  img {
+    width: 70%;
+  }
 }
 
 @media (min-width: 768px) {
-    .card {
+  .card {
     display: flex;
     width: 80%;
-    }
-img{
-    width:50%;
-}
-}
-
-.isbn{
-    display: inline-block;
+  }
+  img {
+    width: 50%;
+  }
 }
 
-.author{
-    font-size: 20px;
-    margin-bottom: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.title{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #2d2831;
+.isbn {
+  display: inline-block;
 }
 
-
+.author {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #2d2831;
+}
 
 @media (min-width: 1200px) {
-    .card {
+  .card {
     width: 80%;
-    }
-img{
-    width:35%;
-}
+  }
+  img {
+    width: 35%;
+  }
 }
 
-.caja{
-    display: flex;
-    flex-direction: column;
-    gap:20px
+.caja {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+fieldset {
+  display: flex;
+  gap: 2rem;
 }

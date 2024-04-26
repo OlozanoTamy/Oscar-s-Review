@@ -23,20 +23,23 @@ app.get("/", async (req, res) => {
     try {
         const response = await db.query("SELECT * FROM libros")
         const libro = response.rows;
-        console.log(libro);
         res.render("index", { listOfBooks: libro })
     } catch (error) {
         console.error("Failed to make request:", error.message);
     };
 })
 
-app.get("/nuevo", async (req, res) => {
+
+app.get("/get-nuevo", async (req, res) => {
     res.render("nuevo.ejs")
+})
+
+app.get("/index", (req, res) => {
+    res.redirect("/");
 })
 
 
 app.post("/send", async (req, res) => {
-
     try {
         const title = req.body.title;
         const autor = req.body.autor;
@@ -45,19 +48,26 @@ app.post("/send", async (req, res) => {
         const fecha = req.body.date;
         const resume = req.body.resume
         const response = db.query("INSERT INTO libros (isbn,title,author,recomend,resume,fecha) VALUES ($1,$2,$3,$4,$5,$6)", [isbn, title, autor, recomend, resume, fecha])
-        res.redirect("/")
+        console.log(req.body);
+        res.redirect("/");
     } catch (error) {
         console.log(error);
-    }
-
-
-
+    };
 })
 
 app.get("/edit", async (req, res) => {
     res.render("edit.ejs");
 })
 
+app.post("/delete", async (req, res) => {
+    try {
+        let numero = req.body.deleteItemId
+        db.query("DELETE FROM libros WHERE id = $1", [numero])
+        res.redirect("/");
+    } catch (error) {
+        console.log(error);
+    }
+})
 
 
 

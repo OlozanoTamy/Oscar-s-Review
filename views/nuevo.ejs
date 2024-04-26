@@ -1,34 +1,41 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oscar's Review</title>
-</head>
-<body>
+  </head>
+  <body>
     <%- include("partials/header.ejs") %>
     <form action="send" method="post">
+      <fieldset>
+        <legend>Please, submmit a new resume</legend>
         <label for="title">Title</label>
-        <input name="title" placeholder="title"><br>
-
+        <input name="title" placeholder="title" /><br />
         <label for="author">author</label>
-        <input name="author" placeholder="author"><br>
-
+        <input name="author" placeholder="author" /><br />
         <label for="isbn">ISBN</label>
-        <input name="isbn" placeholder="isbn"><br>
-        
+        <input name="isbn" placeholder="isbn" /><br />
         <label for="date">Date of lecture</label>
-        <input type="date" name="date"><br>
-        
+        <input type="date" name="date" /><br />
         <label for="recomend">Recommendation</label>
-        <input name="recomend" placeholder="0-10" min=0 max=10><br>
-        
-        <label for="resume">Resumen</label>
-        <textarea  name="resume" placeholder="Your resume here"></textarea>
-        <button type="submit">send</button>
-    </form>
+        <input name="recomend" placeholder="0-10" min="0" max="10" /><br />
+        <label for="country">Choose a country:</label>
+        <input list="country-options" name="country" />
+        <datalist id="country-options">
+          <option value="Colombia"></option>
+          <option value="Venezuela"></option>
+          <option value="brazil"></option>
+        </datalist>
+      </fieldset>
 
-</body>
+      <label for="resume">Resumen</label>
+      <textarea name="resume" placeholder="Your resume here"></textarea>
+      <br />
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+      <output name="resultado" for="a b"></output>
+    </form>
+  </body>
 </html>
